@@ -82,7 +82,7 @@ Segun carrera 	hacer
 						materiasFaltantes <- cantidadMateriasPsicologia - cantidadMateriasAprobadas
 						Escribir "Le faltan ", materiasFaltantes, " materias para finalizar la carrera de Abogacia"
 					SiNo
-						Si cantidadMateriasAprobadas > 266 Entonces
+						Si cantidadMateriasAprobadas > 26 Entonces
 							Escribir "La cantidad de materias no es válida"
 						FinSi
 					FinSi
