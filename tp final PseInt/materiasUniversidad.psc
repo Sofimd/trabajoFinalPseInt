@@ -2,8 +2,13 @@ Algoritmo materiasUniversidad
 	Definir nota1, nota2, nota3, nota4 Como Entero
 	Definir promedioNotas Como Real
 	Definir carrera Como Caracter
+	Definir cantidadMateriasAbogacia, cantidadMateriasPsicologia, cantidadMateriasMedicina, cantidadMateriasAprobadas, materiasFaltantes  Como Entero
 	
-	Escribir "Bienvenidos al campus institucional. Realizaremos un promedio de las notas obtenidas en el cuatrimestre según la carrera que cursa"
+	cantidadMateriasAbogacia<- 26
+	cantidadMateriasPsicologia<- 28
+	cantidadMateriasMedicina <- 30
+	
+	Escribir "Bienvenidos al campus institucional. Realizaremos un promedio de las notas obtenidas según la carrera que cursa"
 	Escribir "ingrese la carrera que cursa (debe empezar con mayúscula y sin acentos): "
 	leer carrera
 	
@@ -34,10 +39,21 @@ Segun carrera 	hacer
 							Escribir "usted está promocionado, no debe rendir final"
 						FinSi
 					FinSi
-					
+					Escribir "Escribir cuántas materias tiene aprobadas, para saber cuántas le faltan para recibirse: "
+					Leer cantidadMateriasAprobadas
+					Si cantidadMateriasAprobadas <= 28 Entonces
+						materiasFaltantes <- cantidadMateriasPsicologia - cantidadMateriasAprobadas
+						Escribir "Le faltan ", materiasFaltantes, " materias para finalizar la carrera de Psicologia"
+					SiNo
+						Si cantidadMateriasAprobadas > 28 Entonces
+							Escribir "La cantidad de materias no es válida"
+						FinSi
+						
+					FinSi
+
 				FinSi
 			"Abogacia":
-				Escribir "La carrera cuenta con 2 instancias evaluativas"
+				Escribir "La carrera cuenta con 2 instancias evaluativas" 
 				
 				Escribir  "Ingrese la primer nota: "
 				leer nota1
@@ -59,8 +75,17 @@ Segun carrera 	hacer
 							Escribir "usted está promocionado, no debe rendir final"
 						FinSi
 					FinSi
-					
-				FinSi
+				Finsi
+					Escribir "Escribir cuántas materias tiene aprobadas, para saber cuántas le faltan para recibirse: "
+					Leer cantidadMateriasAprobadas
+					Si cantidadMateriasAprobadas <= 26 Entonces
+						materiasFaltantes <- cantidadMateriasPsicologia - cantidadMateriasAprobadas
+						Escribir "Le faltan ", materiasFaltantes, " materias para finalizar la carrera de Abogacia"
+					SiNo
+						Si cantidadMateriasAprobadas > 266 Entonces
+							Escribir "La cantidad de materias no es válida"
+						FinSi
+					FinSi
 			"Medicina":
 				Escribir "La carrera cuenta con 4 instancias evaluativas"
 				
@@ -90,7 +115,16 @@ Segun carrera 	hacer
 							Escribir "usted está promocionado, no debe rendir final"
 						FinSi
 					FinSi
-					
+				FinSi
+					Escribir "Escribir cuántas materias tiene aprobadas, para saber cuántas le faltan para recibirse: "
+					Leer cantidadMateriasAprobadas
+					Si cantidadMateriasAprobadas <= 30 Entonces
+						materiasFaltantes <- cantidadMateriasMedicina - cantidadMateriasAprobadas
+						Escribir "Le faltan ", materiasFaltantes, " materias para finalizar la carrera de Medicina"
+					SiNo
+						Si cantidadMateriasAprobadas > 30 Entonces
+							Escribir "La cantidad de materias no es válida"
+					FinSi
 				FinSi
 				
 			De Otro Modo:
